@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 html {
   box-sizing: border-box;
@@ -12,6 +13,12 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  @apply bg-red-600;
+.container {
+  @apply flex justify-center items-center flex-col;
+  @apply p-2.5;
+  @apply font-vt323;
+  background: radial-gradient(#156f99, #0A2E50);
+  width: calc(100% - 20px);
+  height: calc(100vh - 20px);
+
 }
