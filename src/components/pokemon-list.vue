@@ -25,10 +25,10 @@ export default {
         })
         .then((data) => {
           this.nextUrl = data.next;
-          data.results.forEach((pokemon: any) => {
+          data.results.forEach((pokemon: object) => {
             pokemon.id = pokemon.url
               .split("/")
-              .filter(function (part) {
+              .filter(function (part: string) {
                 return !!part;
               })
               .pop();
@@ -44,6 +44,7 @@ export default {
     this.fetchData();
   },
 };
+
 </script>
 
 <style scoped>
@@ -52,7 +53,7 @@ export default {
   @apply w-full max-w-[510px];
 }
 article {
-  @apply h-40 text-center capitalize
+  @apply h-40 text-center capitalize;
   @apply rounded-md cursor-pointer;
   @apply shadow-md;
 }
