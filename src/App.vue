@@ -1,17 +1,18 @@
 <template>
   <div>
-    <RouterView />
+    <PokemonPage></PokemonPage>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import PokemonPage from "./components/pokemon-page.vue";
 
-export default defineComponent({
-  setup() {
+export default {
+  data: () => {
     return {};
   },
-});
+  components: {
+    PokemonPage,
+  },
+};
 </script>
-
-<style scoped></style>
