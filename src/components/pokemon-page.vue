@@ -1,12 +1,14 @@
 <template>
   <div class="container">
     <h1>Pokedex</h1>
-    <PokemonList :imageUrl="imagesUrl" :apiUrl="apiUrl" />
+    <PokemonList :imageUrl="imagesUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
+    <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageUrl="imagesUrl" @closeDetail="closeDetail" />
   </div>
 </template>
 
 <script lang="ts">
 import PokemonList from "./pokemon-list.vue";
+import PokemonDetail from "./pokemon-detail.vue";
 
 export default {
   data: () => {
@@ -14,11 +16,24 @@ export default {
       imagesUrl:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/",
       apiUrl: "https://pokeapi.co/api/v2/pokemon",
+      pokemonUrl: '',
+      showDetail: false
     };
   },
   components: {
     PokemonList,
+    PokemonDetail,
   },
+  methods: {
+    setPokemonUrl(url: string) {
+      this.pokemonUrl = url;
+      this.showDetail = true;
+    },
+    closeDetail() {
+      this.pokemonUrl = '';
+      this.showDetail = false;
+    }
+  }
 };
 </script>
 
