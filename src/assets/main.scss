@@ -12,13 +12,3 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
-.container {
-  @apply flex justify-center items-center flex-col;
-  @apply p-2.5;
-  @apply font-vt323;
-  background: radial-gradient(#156f99, #0A2E50);
-  width: calc(100% - 20px);
-  height: calc(100vh - 20px);
-
-}

@@ -23,6 +23,13 @@ export default {
 </script>
 
 <style>
+.container {
+  @apply flex justify-center items-center flex-col;
+  @apply p-2.5;
+  @apply font-vt323;
+  background: radial-gradient(#156f99, #0A2E50);
+
+}
 h1 {
   @apply text-white text-5xl;
 }
