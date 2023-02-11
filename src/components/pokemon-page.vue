@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h1>Pokedex</h1>
+    <PokemonSearch :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
     <PokemonList :imageUrl="imagesUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
     <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageUrl="imagesUrl" @closeDetail="closeDetail" />
   </div>
@@ -9,6 +10,7 @@
 <script lang="ts">
 import PokemonList from "./pokemon-list.vue";
 import PokemonDetail from "./pokemon-detail.vue";
+import PokemonSearch from "./pokemon-search.vue";
 
 export default {
   data: () => {
@@ -23,6 +25,7 @@ export default {
   components: {
     PokemonList,
     PokemonDetail,
+    PokemonSearch,
   },
   methods: {
     setPokemonUrl(url: string) {
