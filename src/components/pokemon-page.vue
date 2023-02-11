@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Pokedex</h1>
+    <div class="title">Pokedex</div>
     <PokemonSearch :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
     <PokemonList :imageUrl="imagesUrl" :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
     <PokemonDetail v-if="showDetail" :pokemonUrl="pokemonUrl" :imageUrl="imagesUrl" @closeDetail="closeDetail" />
@@ -45,10 +45,10 @@ export default {
   @apply flex justify-center items-center flex-col;
   @apply p-2.5;
   @apply font-vt323;
-  background: radial-gradient(#156f99, #0A2E50);
+  background: radial-gradient(#b8252c, #500a0a);
 
 }
-h1 {
-  @apply text-white text-5xl;
+.title {
+  @apply text-white text-5xl ;
 }
 </style>

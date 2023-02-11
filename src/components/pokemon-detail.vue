@@ -94,10 +94,10 @@
         @apply w-full h-full bg-black/70;
         .detail-view {
             @apply flex justify-center items-center flex-col;
-            @apply relative w-full max-w-[512px] pt-12 bg-white rounded-2xl shadow-lg;
+            @apply relative w-full max-w-[512px] pt-12 bg-slate-100 rounded-2xl shadow-lg;
             .image {
                 @apply flex justify-center items-center;
-                @apply absolute -top-[75px] w-32 h-32 bg-zinc-600 rounded-full;
+                @apply absolute -top-[75px] w-32 h-32 bg-slate-400 rounded-full;
                 @apply overflow-hidden shadow-lg;
             }
 
@@ -139,7 +139,7 @@
                 }
             }
             .close {
-                @apply rounded-md bg-zinc-600 text-white;
+                @apply rounded-md bg-slate-600 text-white;
                 @apply px-4 py-1.5 mb-1.5;
             }
         }
